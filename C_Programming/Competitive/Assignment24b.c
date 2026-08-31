@@ -1,0 +1,43 @@
+#include<stdio.h>
+
+void Pattern(int iRow, int iCol)
+{
+    int i = 0;
+    int j = 0;
+    char ch = '\0';
+    char Ch = '\0';
+
+    for(i = 1 ; i <= iRow ; i++)
+    {
+        for(j = 1, ch = 'A', Ch = 'a' ; j <= iCol ; j++, ch++, Ch++)
+        {
+            if((i % 2) == 0)
+            {
+                printf("%c\t", Ch);
+            }
+            else
+            {
+                printf("%c\t", ch);
+            }
+        }
+        printf("\n");
+        printf("\n");
+    }
+    printf("\n");
+}
+
+int main()
+{
+    int iValue1 = 0;
+    int iValue2 = 0;
+
+    printf("Enter the number of Rows : \n");
+    scanf("%d", &iValue1);
+
+    printf("Enter the number of Columns : \n");
+    scanf("%d", &iValue2);
+
+    Pattern(iValue1, iValue2);
+
+    return 0;
+}
